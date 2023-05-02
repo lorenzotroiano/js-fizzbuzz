@@ -4,9 +4,7 @@ let i, f, b;
 
 
 
-// creare elenco di numeri da 1 a 100
-
-// dare una "variabile" di nome contenitore e selezionarlo dal documento (prendere quindi classe contenitore all'interno del div)
+// dare una "variabile" di nome contenitore e selezionarlo dal documento (che ha id contenitore)
 const contenitore = document.getElementById("contenitore");
 
 
@@ -20,39 +18,50 @@ c = "fizzbuzz"
 // creare un ciclo che fa da numero 1 a 100 compreso
 for   ( i = 1; i <= 100; i++) {
         
-    
+    // crea un nuovo elemento (span)
     const contenuto = document.createElement('span');
 
+
+    // serve x creare una nuova classe e aggiungerla
     // contenuto.classList.add('green');
+
+
+    //aggiunge classe i (di for) dentro al contenuto che sarebbe lo span
     contenuto.append(i);
+
+    // aggiunge il contenuto (ovvero span) dentro il contenitore (div)
     contenitore.append(contenuto);
 
 
   
+    // Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
     if ( i % 3 === 0 && i % 5 === 0) {
         
         output = c;
-        // contenuto = `<span class="${i}">${c}</span>`;
+    
+        // serve x cambiare colore
         contenuto.style.backgroundColor = "#f0466f";
      
       
     }
 
+    // i multipli di 5 stampi “Buzz”.
     else if ( i % 5 === 0) {
 
         output = b;
         contenuto.style.backgroundColor = "#ffd166";
-        // contenuto = `<span class="${i}">${b}</span>`;
+        
         
         
     }
 
+    // i multimi di 3 stampi Fizz
      else if ( i % 3 === 0) {
 
         output = f;
 
         contenuto.style.backgroundColor = "#0cd6a1";
-        // contenuto = `<span class="${i}">${f}</span>`;
+      
        
     }
 
@@ -60,34 +69,22 @@ for   ( i = 1; i <= 100; i++) {
     else {
 
         output = i;
-        // contenuto = `<span class="${i}">${i}</span>`;
+      
        
     }
 
-    contenuto.innerHTML = output;
-
-
-    // creare "variabile" di nome contenuto che stamperà successivamente il testo corrispettivo, inserendolo direttamente dentro il tag div (con uno span)
-    
-    
-    // inserire all'interno del contenitore il contenuto (+ e = per far entrare tutti i numeri)
-   
-    
-
-    
-     
+    contenuto.innerHTML = output;  
     
 }
 
 
 
-// i multimi di 3 stampi Fizz
 
 
 
-// i multipli di 5 stampi “Buzz”.
 
-// Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
+
+
 
 
 
