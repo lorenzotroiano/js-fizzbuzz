@@ -1,12 +1,12 @@
 // regole generali
-const contenitore = document.querySelector("div.contenitore");
+
 
 
 
 
 // creare elenco di numeri da 1 a 100
 
-
+const contenitore = document.querySelector("div.contenitore");
 
 for (let i = 1; i <= 100; i++) {
 
