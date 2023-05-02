@@ -1,5 +1,5 @@
 // regole generali
-
+let i, f, b;
 
 
 
@@ -10,25 +10,51 @@
 const contenitore = document.querySelector("div.contenitore");
 
 
-
+f = "Fizz";
+b = "Buzz";
 
 // creare un ciclo che fa da numero 1 a 100 compreso
-for (let i = 1; i <= 100; i++) {
+for   ( i = 1; i <= 100; i++) {
+
+     if ( i % 3 === 0 && i % 5 === 0) {
+        contenuto = `<span class="${i}">${i}</span>`
+        contenitore.innerHTML += contenuto + f + b;
+    }
+
+     else if ( i % 3 === 0) {
+        contenuto = `<span class="${i}">${i}</span>`
+        contenitore.innerHTML += contenuto + f;
+    }
+
+    else if ( i % 5 === 0) {
+        contenuto = `<span class="${i}">${i}</span>`
+        contenitore.innerHTML += contenuto + b;
+    }
+
+
+    else {
+        contenuto = `<span class="${i}">${i}</span>`
+        contenitore.innerHTML += contenuto;
+    }
 
 
     // creare "variabile" di nome contenuto che stamperà successivamente il testo corrispettivo, inserendolo direttamente dentro il tag div (con uno span)
-    const contenuto = `<span>${i}</span>`
+    
     
     // inserire all'interno del contenitore il contenuto (+ e = per far entrare tutti i numeri)
-    contenitore.innerHTML += contenuto;
+   
     
 
-    console.log(i);
+    
+     
+    
 }
 
 
 
-// i multipli di 3 stampi “Fizz” al posto del numero
+// i multimi di 3 stampi Fizz
+
+
 
 // i multipli di 5 stampi “Buzz”.
 
