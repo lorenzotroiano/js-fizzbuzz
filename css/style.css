@@ -41,7 +41,7 @@ span {
 
     padding: 5px;
     border: 1px solid violet;
-    background-color: crimson;
+    /* background-color: crimson; */
 
 
     display: flex;

@@ -10,33 +10,45 @@ let i, f, b;
 const contenitore = document.querySelector("div.contenitore");
 
 
+
 f = "Fizz";
 b = "Buzz";
 c = "fizzbuzz"
 
+
+
 // creare un ciclo che fa da numero 1 a 100 compreso
 for   ( i = 1; i <= 100; i++) {
+        
+    
+    
+
 
      if ( i % 3 === 0 && i % 5 === 0) {
+        
+        
         contenuto = `<span class="${i}">${c}</span>`
-        contenitore.innerHTML += contenuto;
+        // contenitore.innerHTML += contenuto;
+      
     }
 
     else if ( i % 5 === 0) {
         contenuto = `<span class="${i}">${b}</span>`
-        contenitore.innerHTML += contenuto;
+        // contenitore.innerHTML += contenuto;
     }
 
      else if ( i % 3 === 0) {
         contenuto = `<span class="${i}">${f}</span>`
-        contenitore.innerHTML += contenuto;
+        // contenitore.innerHTML += contenuto;
     }
 
 
     else {
         contenuto = `<span class="${i}">${i}</span>`
-        contenitore.innerHTML += contenuto;
+        // contenitore.innerHTML += contenuto;
     }
+
+    contenitore.innerHTML += contenuto;
 
 
     // creare "variabile" di nome contenuto che stamperà successivamente il testo corrispettivo, inserendolo direttamente dentro il tag div (con uno span)
