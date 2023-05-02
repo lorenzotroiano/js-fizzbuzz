@@ -7,7 +7,7 @@ let i, f, b;
 // creare elenco di numeri da 1 a 100
 
 // dare una "variabile" di nome contenitore e selezionarlo dal documento (prendere quindi classe contenitore all'interno del div)
-const contenitore = document.querySelector("div.contenitore");
+const contenitore = document.getElementById("contenitore");
 
 
 
@@ -21,34 +21,50 @@ c = "fizzbuzz"
 for   ( i = 1; i <= 100; i++) {
         
     
-    
+    const contenuto = document.createElement('span');
+
+    // contenuto.classList.add('green');
+    contenuto.append(i);
+    contenitore.append(contenuto);
 
 
-     if ( i % 3 === 0 && i % 5 === 0) {
+  
+    if ( i % 3 === 0 && i % 5 === 0) {
         
-        
-        contenuto = `<span class="${i}">${c}</span>`
-        // contenitore.innerHTML += contenuto;
+        output = c;
+        // contenuto = `<span class="${i}">${c}</span>`;
+        contenuto.style.backgroundColor = "#f0466f";
+     
       
     }
 
     else if ( i % 5 === 0) {
-        contenuto = `<span class="${i}">${b}</span>`
-        // contenitore.innerHTML += contenuto;
+
+        output = b;
+        contenuto.style.backgroundColor = "#ffd166";
+        // contenuto = `<span class="${i}">${b}</span>`;
+        
+        
     }
 
      else if ( i % 3 === 0) {
-        contenuto = `<span class="${i}">${f}</span>`
-        // contenitore.innerHTML += contenuto;
+
+        output = f;
+
+        contenuto.style.backgroundColor = "#0cd6a1";
+        // contenuto = `<span class="${i}">${f}</span>`;
+       
     }
 
 
     else {
-        contenuto = `<span class="${i}">${i}</span>`
-        // contenitore.innerHTML += contenuto;
+
+        output = i;
+        // contenuto = `<span class="${i}">${i}</span>`;
+       
     }
 
-    contenitore.innerHTML += contenuto;
+    contenuto.innerHTML = output;
 
 
     // creare "variabile" di nome contenuto che stamperà successivamente il testo corrispettivo, inserendolo direttamente dentro il tag div (con uno span)
